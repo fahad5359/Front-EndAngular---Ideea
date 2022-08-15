@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 // import {UserssComponent} from "./userss/userss.component";
-import {MehHttpService} from "./meh-http.service";
+import {MehHttpService} from "./MyService";
 
 
 @Component({

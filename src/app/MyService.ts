@@ -4,26 +4,14 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
-export class MehHttpService {
+export class MyService {
 
-  constructor(private httpp: HttpClient) {
+  constructor(private htpp: HttpClient) {}
+
+  public addingUser(userr){
+    //Better Test the Req in PostMan
+    return this.htpp.post("http://localhost:9191/addMany",userr); //we add the User Object to the Request
   }
 
-  //Get
-  public getUser() {
-    const hedr = new HttpHeaders({
-      'content-type': 'application/json',
-      'authenticationTokeeeeeeeeeeen': '55359'
-    });
-    //جب المعلومات اللي هنا وحطها في المتغير ذا
-    return this.httpp.get("https://jsonplaceholder.typicode.com/users", {headers: hedr});
-  }
-
-//  Post
-  public postUser(body) {
-
-    // return this.httpp.post('https://jsonplaceholder.typicode.com/users',body)
-    return this.httpp.post('http://localhost:9191/addMany', body)
-  }
 }
 

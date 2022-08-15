@@ -7,7 +7,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { RegsetrationComponent } from './regsetration/regsetration.component';
 import { SearchDelteComponent } from './search-delte/search-delte.component';
-import {MehHttpService} from "./meh-http.service";
+import {MyService} from "./MyService";
+
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {MehHttpService} from "./meh-http.service";
     FormsModule
 
   ],
-  providers: [MehHttpService],
+  providers: [MyService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

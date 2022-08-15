@@ -8,7 +8,7 @@ import {Useer} from "../useer";
 })
 export class RegsetrationComponent implements OnInit {
 
-  userr= new Useer("","","","");
+  userr= new Useer("","","");
   constructor() { }
 
   ngOnInit(): void {

@@ -1,40 +1,29 @@
-<div style="text-align: center">
-  <h1>{{message}}</h1>
-</div>
-
 <div class="container">
   <div class="row">
     <div class="col-md-6">
       <form>
 
         <div class="form-group">
-        <label for="Name"> User Name <small>This will be your login user name</small> </label>
-        <input required type="text" [(ngModel)]="user.name" name="name" id="Name"
-               class="form-control phone" maxlength="28" placeholder="User Name..."/>
-      </div>
+          <label for="userName"> User Name <small>This will be your login user name</small> </label>
+          <input required type="text" [(ngModel)]="useer.userNem" name="userNaame" id="userName">
+        </div>
         <div class="form-group">
           <label for="passWord"> PassWord </label>
-          <input required type="text" [(ngModel)]="useer.passWord" name="passWord" id="passWord"
+          <input required type="password" [(ngModel)]="useer.passWord" name="passWord" id="passWord"
                  class="form-control phone" maxlength="28" placeholder="Enter passWord"/>
         </div>
 
-        <div class="form-group">
-          <label for="firstname"> Email: </label>
-          <input class="form-control" type="text" [(ngModel)]="useer.email" name="email" id="firstname" [required]
-                 placeholder="Enter valid email address"/>
-          <div id="errFirst"></div>
-        </div>
 
         <div class="form-group">
           <label for="Ideea"> Ideea : </label>
-          <input class="form-control" type="text" [(ngModel)]="useer.experience" name="experience" id="Ideea"
+          <input class="form-control" type="text" [(ngModel)]="useer.ideea" name="ideea" id="Ideea"
                  placeholder="Tell us The Ideea" required/>
           <div id="errLast"></div>
         </div>
 
 
         <div class="form-group">
-          <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+          <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="AddUser()">
         </div>
       </form><!-- ends register form -->
       <!-- second for to fiter user-->

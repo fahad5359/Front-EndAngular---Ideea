@@ -21,7 +21,6 @@ import {MyService} from "./MyService";
     AppRoutingModule,
     HttpClientModule,
     FormsModule
-
   ],
   providers: [MyService],
   bootstrap: [AppComponent]

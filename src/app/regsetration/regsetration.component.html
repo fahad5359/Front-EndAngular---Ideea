@@ -1,33 +1,34 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-lg-2">
       <form>
 
         <div class="form-group">
           <label for="userName"> User Name <small>This will be your login user name</small> </label>
-          <input required type="text" [(ngModel)]="useer.userNem" name="userNaame" id="userName">
+          <input type="text" [(ngModel)]="useer.userNem" name="userNaame" id="userName" required>
         </div>
         <div class="form-group">
           <label for="passWord"> PassWord </label>
-          <input required type="password" [(ngModel)]="useer.passWord" name="passWord" id="passWord"
-                 class="form-control phone" maxlength="28" placeholder="Enter passWord"/>
+          <input type="password" [(ngModel)]="useer.passWord" name="passWord" id="passWord" class="form-control phone"
+            placeholder="Enter passWord" required>
         </div>
 
 
         <div class="form-group">
           <label for="Ideea"> Ideea : </label>
-          <input class="form-control" type="text" [(ngModel)]="useer.ideea" name="ideea" id="Ideea"
-                 placeholder="Tell us The Ideea" required/>
-          <div id="errLast"></div>
+          <textarea class="form-control" type="text" [(ngModel)]="useer.ideea" name="ideea" id="Ideea"
+            placeholder="Tell us The Ideea" required>
+        </textarea>
+
         </div>
 
 
         <div class="form-group">
           <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="AddUser()">
         </div>
-      </form><!-- ends register form -->
-      <!-- second for to fiter user-->
-    </div><!-- ends col-6 -->
+      </form>
+
+    </div>
 
   </div>
 </div>

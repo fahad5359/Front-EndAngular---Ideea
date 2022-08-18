@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-2">
+    <div class="col-lg-2" formGroupName="UsersInfo" >
       <form>
 
-        <div class="form-group">
+        <div class="form-group" >
           <label for="userName"> User Name <small>This will be your login user name</small> </label>
-          <input type="text" [(ngModel)]="useer.userNem" name="userNaame" id="userName" required>
+          <input type="text" [(ngModel)]="useer.userNem"  name="userNaame" id="userName" required>
         </div>
         <div class="form-group">
           <label for="passWord"> PassWord </label>

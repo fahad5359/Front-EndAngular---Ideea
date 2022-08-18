@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Useer} from "../useer";
 import {MyService} from "../MyService";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-regsetration',
@@ -10,7 +11,9 @@ import {MyService} from "../MyService";
 export class RegsetrationComponent implements OnInit {
 
   useer: Useer= new Useer("", "", "");
+
   message: any
+
 
   constructor(private srvce: MyService) {
   }
@@ -19,9 +22,13 @@ export class RegsetrationComponent implements OnInit {
   }
 
   //Post
+
   public AddUser() {
     let resoonse = this.srvce.addingUser(this.useer);
     resoonse.subscribe((date)=>this.message=date );
     console.log(resoonse);
   }
+
+
+
 }

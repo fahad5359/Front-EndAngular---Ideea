@@ -26,9 +26,9 @@ export class RegsetrationComponent implements OnInit {
   public AddUser() {
     let resoonse = this.srvce.addingUser(this.useer);
     resoonse.subscribe((date)=>this.message=date );
-    console.log(resoonse);
+    console.log(this.message);
   }
 
 
-
+//
 }

@@ -1,23 +1,24 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-2" formGroupName="UsersInfo" >
+    <div class="col-lg-2" formGroupName="UsersInfo">
+      <h1>Hla {{message}}</h1> <br>
       <form>
 
-        <div class="form-group" >
-          <label for="userName"> User Name <small>This will be your login user name</small> </label>
-          <input type="text" [(ngModel)]="useer.userNem"  name="userNaame" id="userName" required>
+        <div class="form-group">
+          <label for="userName" class="col-form-label-lg"> User Name </label>
+          <input type="text" [(ngModel)]="useer.userNem" name="userNaame" id="userName" required>
         </div>
         <div class="form-group">
           <label for="passWord"> PassWord </label>
           <input type="password" [(ngModel)]="useer.passWord" name="passWord" id="passWord" class="form-control phone"
-            placeholder="Enter passWord" required>
+                 placeholder="Enter passWord" required>
         </div>
 
 
         <div class="form-group">
           <label for="Ideea"> Ideea : </label>
           <textarea class="form-control" type="text" [(ngModel)]="useer.ideea" name="ideea" id="Ideea"
-            placeholder="Tell us The Ideea" required>
+                    placeholder="Tell us The Ideea" required>
         </textarea>
 
         </div>

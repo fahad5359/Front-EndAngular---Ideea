@@ -8,13 +8,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { RegsetrationComponent } from './regsetration/regsetration.component';
 import { SearchDelteComponent } from './search-delte/search-delte.component';
 import {MyService} from "./MyService";
+import { EmptyPageComponent } from './empty-page/empty-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegsetrationComponent,
-    SearchDelteComponent
+    SearchDelteComponent,
+    EmptyPageComponent
   ],
   imports: [
     BrowserModule,

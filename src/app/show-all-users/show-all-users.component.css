@@ -1,0 +1,10 @@
+.Nem{
+  color: lawngreen;
+}
+.Nem:hover{
+  color: darkgreen;
+  transition: 450ms;
+}
+#NName{
+  color: #1d6cb9;
+}

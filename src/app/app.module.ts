@@ -9,6 +9,7 @@ import { RegsetrationComponent } from './regsetration/regsetration.component';
 import { SearchDelteComponent } from './search-delte/search-delte.component';
 import {MyService} from "./MyService";
 import { EmptyPageComponent } from './empty-page/empty-page.component';
+import { ShowAllUsersComponent } from './show-all-users/show-all-users.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { EmptyPageComponent } from './empty-page/empty-page.component';
     AppComponent,
     RegsetrationComponent,
     SearchDelteComponent,
-    EmptyPageComponent
+    EmptyPageComponent,
+    ShowAllUsersComponent
   ],
   imports: [
     BrowserModule,

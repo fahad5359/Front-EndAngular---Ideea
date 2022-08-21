@@ -3,12 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import {RegsetrationComponent} from "./regsetration/regsetration.component";
 import {SearchDelteComponent} from "./search-delte/search-delte.component";
 import {EmptyPageComponent} from "./empty-page/empty-page.component";
+import {ShowAllUsersComponent} from "./show-all-users/show-all-users.component";
+// import {ShowAllUsersComponent} from "./show-all-users/show-all-users.component";
 
 const routes: Routes = [
   {path:"",component:EmptyPageComponent},
   // {path:"",redirectTo:"regester",pathMatch:"full"}, // if want to be redirected to Resgestard Automatically
   {path:"regester",component:RegsetrationComponent},
-  {path:"search",component:SearchDelteComponent}
+  {path:"delete",component:SearchDelteComponent},
+  {path:"allUsers",component:ShowAllUsersComponent}
 ];
 
 @NgModule({

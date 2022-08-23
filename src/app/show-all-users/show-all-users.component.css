@@ -1,9 +1,10 @@
 .Nem{
-  color: lawngreen;
+  color: #8f8f8f;
 }
 .Nem:hover{
-  color: darkgreen;
-  transition: 450ms;
+  color: #000000;
+  transition: 45ms;
+  font-family: Verdana ;
 }
 #NName{
   color: #1d6cb9;

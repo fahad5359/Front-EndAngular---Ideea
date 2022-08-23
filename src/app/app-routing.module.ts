@@ -7,11 +7,11 @@ import {ShowAllUsersComponent} from "./show-all-users/show-all-users.component";
 // import {ShowAllUsersComponent} from "./show-all-users/show-all-users.component";
 
 const routes: Routes = [
-  {path:"",component:EmptyPageComponent},
-  // {path:"",redirectTo:"regester",pathMatch:"full"}, // if want to be redirected to Resgestard Automatically
-  {path:"regester",component:RegsetrationComponent},
+  {path:"",redirectTo:"/register",pathMatch:'full'},
+  {path:"register",component:RegsetrationComponent},
+  {path:"allUsers",component:ShowAllUsersComponent},
   {path:"delete",component:DeleteUser},
-  {path:"allUsers",component:ShowAllUsersComponent}
+  {path:"**",component:EmptyPageComponent}
 ];
 
 @NgModule({

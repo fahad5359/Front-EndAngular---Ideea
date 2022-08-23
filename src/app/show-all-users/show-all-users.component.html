@@ -1,14 +1,31 @@
-<p>show-all-users works!</p>
-<p>search-delte works!</p>
-<div class="container">
-  <div class="col-md-1" *ngFor="let usr of user">
-    {{usr.id}}
-    <p class="Nem"><span id="NName"> Name is</span>   {{usr.userNem}}</p>
+<!--<div class="container">-->
+<!--  <div class="col-md-1" >-->
+<!--     -->
+<!--    <p class="Nem"><span id="NName"> Name is</span>  </p>-->
 
-   <p> Pass Word is {{usr.passWord}}</p>
-    {{usr.ideea}}
-<!--    <button (click)="showAllUsers()">All Usersbellow </button><hr>-->
+<!--    <p> Pass Word is </p>-->
+<!--    -->
+<!--    &lt;!&ndash;    <button (click)="showAllUsers()">All Usersbellow </button><hr>&ndash;&gt;-->
 
-  </div>
-</div>
+<!--  </div>-->
+<!--</div>-->
 
+<table class="table" >
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">User Name</th>
+    <th scope="col">PassWord</th>
+    <th scope="col">Ideea</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let usr of user">
+    <th scope="row">{{usr.id}}</th>
+    <td class="Nem">@{{usr.userNem}}</td>
+    <td>{{usr.passWord}}</td>
+    <td>{{usr.ideea}}</td>
+  </tr>
+
+  </tbody>
+</table>

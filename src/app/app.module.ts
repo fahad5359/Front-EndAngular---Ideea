@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { RegsetrationComponent } from './regsetration/regsetration.component';
-import { SearchDelteComponent } from './delete/search-delte.component';
+import {DeleteUser} from './delete/search-delte.component';
 import {MyService} from "./MyService";
 import { EmptyPageComponent } from './empty-page/empty-page.component';
 import { ShowAllUsersComponent } from './show-all-users/show-all-users.component';
@@ -16,7 +16,7 @@ import { ShowAllUsersComponent } from './show-all-users/show-all-users.component
   declarations: [
     AppComponent,
     RegsetrationComponent,
-    SearchDelteComponent,
+    DeleteUser,
     EmptyPageComponent,
     ShowAllUsersComponent
   ],

@@ -28,7 +28,7 @@ export class RegsetrationComponent implements OnInit {
     resoonse.subscribe((date)=>this.message=date );
     console.log(this.message);
   }
-
+public Add
 
 //
 }

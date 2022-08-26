@@ -1,21 +1,32 @@
-<!--<table class="table" >-->
-<!--  <thead>-->
-<!--  <tr>-->
-<!--    <th scope="col">#</th>-->
-<!--    <th scope="col">User Name</th>-->
-<!--    <th scope="col">PassWord</th>-->
-<!--    <th scope="col">Ideea</th>-->
-<!--  </tr>-->
-<!--  </thead>-->
-<!--  <tbody>-->
-<!--  <tr *ngFor="let usr of user">-->
-<!--    <th scope="row">{{usr.id}}</th>-->
-<!--    <td class="Nem">@{{usr.userNem}}</td>-->
-<!--    <td>{{usr.passWord}}</td>-->
-<!--    <td>{{usr.ideea}}</td>-->
-<!--    <td>{{usr.likes}}</td>-->
-<!--    <td class="gly">{{usr.diLikes}}</td>-->
-<!--  </tr>-->
+<table class="table" >
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">User Name</th>
+    <th scope="col" *ngIf="passShow">PassWord</th>
+    <th scope="col">Ideea</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let usr of user">
+    <th scope="row">{{usr.id}}</th>
+    <td class="Nem">@{{usr.userNem}}</td>
+    <td *ngIf="passShow">{{usr.passWord}}</td>
 
-<!--  </tbody>-->
-<!--</table>-->
+    <td>{{usr.ideea}}</td>
+    <td>{{usr.likes}}</td>
+    <td class="gly">{{usr.diLikes}}</td>
+  </tr>
+  <button type="submit" class="btn btn-warning" (click)="ShowHidepass()">Show/Hide</button>
+
+  </tbody>
+</table>
+
+<!--<div class="container">-->
+<!--  Search By ID-->
+<!--  <div class="shadow-sm">-->
+<!--    <input type="number" name="id" [(ngModel)]="id">-->
+<!--    <button type="submit" (click)="searchUserById()">Viow user</button>-->
+<!--  </div>-->
+<!--&lt;!&ndash;  <p>Info{{id}}</p>&ndash;&gt;-->
+<!--</div>-->

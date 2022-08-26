@@ -3,5 +3,6 @@ export class Useer{
   userNem: string;
   passWord:string;
   ideea:string
-  constructor(userNem:string, passWord:string, ideea:string) {}
+  email:string
+  constructor(userNem:string, passWord:string, ideea:string, email:string) {}
 }

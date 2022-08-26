@@ -10,7 +10,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class RegsetrationComponent implements OnInit {
 
-  useer: Useer= new Useer("", "", "");
+  useer: Useer= new Useer("", "", "","");
 
   message: any
 

@@ -1,3 +1,29 @@
-<p>search-delte works!</p>
-<label for="search">Delet User</label>
-<input type="text" id="search">
+
+
+<div class="container">
+  <label for="search">Delet User By ID </label>
+  <input type="text" id="search">
+<!--  <button type="submit" (click)="delteUser(usr.id)" class="btn btn-danger">Delet</button>-->
+</div>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">User Name</th>
+    <th scope="col">PassWord</th>
+    <th scope="col">Ideea</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let usr of userr">
+    <th scope="row">{{usr.id}}</th>
+    <td class="Nem">@{{usr.userNem}}</td>
+    <td>{{usr.passWord}}</td>
+    <td>{{usr.ideea}}</td>
+    <td>{{usr.likes}}</td>
+    <td class="gly">{{usr.diLikes}}</td>
+    <button type="submit" (click)="delteUser(usr.id)" class="btn btn-danger blackk">Delete</button>
+  </tr>
+  </tbody>
+</table>

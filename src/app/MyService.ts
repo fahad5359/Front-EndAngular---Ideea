@@ -20,13 +20,16 @@ export class MyService {
   public getAllUsers(userr){
     return this.htpp.get('http://localhost:9191/getAll',userr)
   }
-  //Get by Nem
+  //Tst Get by Id
 
 
   //Delete
   public deleteUser(id){
-    return this.htpp.delete("http://localhost:9191/deletById",id)
-
+    return this.htpp.delete("http://localhost:9191/deletById/"+id);
+  }
+  //Tst Delet by Nem
+  public deleteByName(userName){
+    return this.htpp.delete("http://localhost:9191/deletByUserName/",userName)
   }
 }
 

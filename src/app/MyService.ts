@@ -17,7 +17,7 @@ export class MyService {
   }
 //Post NewIdeea
   public makeIdeea(ida){
-    this.htpp.post("http://localhost:9191/makeIdeea",ida)
+    this.htpp.post("http://localhost:9191/makeIdeea",ida);
   }
 
   //Get

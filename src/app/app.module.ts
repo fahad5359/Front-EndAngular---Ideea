@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule} from "@angular/forms";
 import { RegsetrationComponent } from './regsetration/regsetration.component';
 import {DeleteUser} from './delete/search-delte.component';
 import {MyService} from "./MyService";
@@ -26,8 +26,7 @@ import { MakeIdeeaComponent } from './make-ideea/make-ideea.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
+    FormsModule
   ],
   providers: [MyService],
   bootstrap: [AppComponent]

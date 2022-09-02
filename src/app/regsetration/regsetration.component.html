@@ -1,35 +1,34 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-2" formGroupName="UsersInfo">
+    <div class="col-lg-2 cardShaddow" formGroupName="UsersInfo">
       <!-- <h1>Hla {{message}}</h1> <br> -->
       <form>
 
-        <div class="form-group">
-          <label for="userName" class="col-form-label-lg"> User Name </label>
-          <input type="text" [(ngModel)]="useer.userNem" name="userNaame" id="userName" required>
+        <div class="form-group" >
+          <label for="userName" class="col-form-label-lg "> User Name </label>
+          <input class="form-control phone textWiddth" type="text" [(ngModel)]="useer.userNem" name="userNaame" id="userName" required #name="ngModel">
         </div>
         <div class="form-group">
           <label for="email" class="col-form-label-lg">Email </label>
-          <input type="text" [(ngModel)]="useer.email" name="email" id="email" required>
+          <input class="form-control phone textWiddth"  type="text" [(ngModel)]="useer.email" name="email" id="email" >
         </div>
         <div class="form-group">
           <label for="passWord"> PassWord </label>
-          <input type="password" [(ngModel)]="useer.passWord" name="passWord" id="passWord" class="form-control phone"
-                 placeholder="Enter passWord" required>
+          <input  type="password" [(ngModel)]="useer.passWord" name="passWord" id="passWord" class="form-control phone textWiddth" placeholder="Enter passWord" required>
         </div>
 
 
-        <div class="form-group">
+
+        <!-- <div class="form-group">
           <label for="Ideea"> Ideea : </label>
           <textarea class="form-control" type="text" [(ngModel)]="useer.ideea" name="ideea" id="ideea"
                     placeholder="Tell us The Ideea" required>
         </textarea>
-
-        </div>
+        </div> -->
 
 
         <div class="form-group">
-          <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="AddUser()">
+          <input class="btn btn-success textWiddth" type="submit" name="submit_reg" value="Register" (click)="makeButtonAppear()">
         </div>
       </form>
 

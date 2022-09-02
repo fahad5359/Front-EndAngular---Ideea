@@ -2,17 +2,8 @@
   <div *ngFor="let  objArrau of objArrau">
     <h1 class=" text-center">{{objArrau.subject|titlecase}}</h1>
     <p class=" form-text bakgrndd text-center">{{objArrau.userNem|lowercase}}</p>
-    <p class=" text-center">{{objArrau.idea | json}}</p>
+    <p class=" text-center">{{objArrau.idea}}</p>
   </div>
-
-  <!--  <div *ngIf="addComintBtn">-->
-  <!--    <div *ngFor="let comnt of comnt">-->
-  <!--      <p>{{comnt.commint}}</p>-->
-  <!--    </div>-->
-  <!--    <input #cmnt class="form-control">-->
-  <!--    <button class="btn-primary" (click)="CrateCommint(cmnt.value)">Add Commint</button>-->
-  <!--    &lt;!&ndash;<button (click)="asd()">ds</button>&ndash;&gt;-->
-  <!--  </div>-->
 </div>
 
 <!------------------------------------------------------------->
@@ -21,23 +12,24 @@
   <div class="row-cols-md-1 form-control">
 
     <input
+      [(ngModel)]="Ideea.subject"
       #Sbjct
       class="form-control" placeholder="Subject">
 
     <div class="form-control">
       <input
+        [(ngModel)]="Ideea.username"
         #usrnem
         placeholder="@UserName">
     </div>
     <div>
       <textarea
+        [(ngModel)]="Ideea.ideeea"
         #Ida
         class="form-control" rows="6" placeholder="Idea">
       </textarea>
     </div>
-    <button type="button" class="btn-primary btn"
-            (click)="postIdea(Sbjct.value,usrnem.value,Ida.value);
-             ">Post
+    <button type="button" class="btn-primary btn"(click)="postIdea(Sbjct.value,usrnem.value,Ida.value); AddUser()">Post
     </button>
   </div>
 </div>

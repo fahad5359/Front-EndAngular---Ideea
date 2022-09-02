@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Useer} from "../useer";
+import {Useer} from "../Entitys/useer";
 import {MyService} from "../MyService";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
@@ -10,7 +10,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class RegsetrationComponent implements OnInit {
 
-  useer: Useer= new Useer("", "", "","");
+  useer: Useer = new Useer("", "", "", "");
 
   message: any
 
@@ -25,10 +25,10 @@ export class RegsetrationComponent implements OnInit {
 
   public AddUser() {
     let resoonse = this.srvce.addingUser(this.useer);
-    resoonse.subscribe((date)=>this.message=date );
+    resoonse.subscribe((date) => this.message = date);
     console.log(this.message);
   }
-public Add
+
 
 //
 }

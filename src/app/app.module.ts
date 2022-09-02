@@ -10,6 +10,7 @@ import {DeleteUser} from './delete/search-delte.component';
 import {MyService} from "./MyService";
 import { EmptyPageComponent } from './empty-page/empty-page.component';
 import { ShowAllUsersComponent } from './show-all-users/show-all-users.component';
+import { MakeIdeeaComponent } from './make-ideea/make-ideea.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ShowAllUsersComponent } from './show-all-users/show-all-users.component
     RegsetrationComponent,
     DeleteUser,
     EmptyPageComponent,
-    ShowAllUsersComponent
+    ShowAllUsersComponent,
+    MakeIdeeaComponent
   ],
   imports: [
     BrowserModule,

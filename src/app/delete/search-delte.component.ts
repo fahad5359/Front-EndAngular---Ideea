@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MyService} from "../MyService";
-import {Useer} from "../useer";
+import {Useer} from "../Entitys/useer";
 
 @Component({
   selector: 'app-delete',

@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {MyService} from "../MyService";
+import {Ideea} from "../Entitys/Ideea";
 
 @Component({
   selector: 'app-make-ideea',
@@ -7,11 +9,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MakeIdeeaComponent implements OnInit {
 
-  constructor() {
+  Ideea: Ideea = new Ideea("", "", "")
+ message: any;
+  constructor(private servse: MyService) {
   }
 
   ngOnInit(): void {
   }
+
+
 
   // Adding Comint
   addComintBtn = false
@@ -22,7 +28,7 @@ export class MakeIdeeaComponent implements OnInit {
   comnt = [{commint: ""}]
 
   // Event ↓
-  postIdea(Sbjct: string, usrnem: string, Ida: string) {
+  public postIdea(Sbjct: string, usrnem: string, Ida: string) {
     if (Sbjct && usrnem && Ida) {
       this.objArrau.push({subject: Sbjct}, {userNem: "@" + usrnem}, {idea: Ida});
       this.addComintBtn = true
@@ -32,7 +38,7 @@ export class MakeIdeeaComponent implements OnInit {
   //make whne pressed enter the input submit
 
 
-  CrateCommint(Cmnt: string) {
+  public CrateCommint(Cmnt: string) {
     if (Cmnt) {
       this.comnt.push({commint: Cmnt})
     }
@@ -40,5 +46,9 @@ export class MakeIdeeaComponent implements OnInit {
     console.log("commint Created")
   }
 
+  public AddUser() {
+    let resoonse = this.servse.addingUser(this.Ideea);
+    resoonse.subscribe((date) => this.message = date);
+  }
 
 }

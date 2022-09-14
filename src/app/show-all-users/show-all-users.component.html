@@ -9,18 +9,16 @@
   </thead>
   <tbody>
   <tr *ngFor="let usr of user">
-    <th scope="row">{{usr.id}}</th>
-    <td class="Nem">@{{usr.userNem}}</td>
+    <th scope="row"> {{usr.id}}</th>
+    <td class="Nem">@ {{usr.userName}} </td>
     <td *ngIf="passShow">{{usr.passWord}}</td>
-
     <td>{{usr.ideea}}</td>
-    <td>{{usr.likes}}</td>
-    <td class="gly">{{usr.diLikes}}</td>
   </tr>
-  <button type="submit" class="btn btn-warning" (click)="ShowHidepass()">Show/Hide</button>
+
 
   </tbody>
 </table>
+<button type="submit" class="btn btn-warning" (click)="ShowHidepass()">Show/Hide</button>
 
 <!--<div class="container">-->
 <!--  Search By ID-->
@@ -30,3 +28,7 @@
 <!--  </div>-->
 <!--&lt;!&ndash;  <p>Info{{id}}</p>&ndash;&gt;-->
 <!--</div>-->
+
+<div>
+  <input type="asd" [(ngModel)]="asd">
+</div>

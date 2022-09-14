@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MyService } from '../MyService';
-import { Ideea } from '../Entitys/Ideea';
+import {Useer} from "../Entitys/useer";
+
 
 @Component({
   selector: 'app-make-ideea',
@@ -8,7 +9,7 @@ import { Ideea } from '../Entitys/Ideea';
   styleUrls: ['./make-ideea.component.css'],
 })
 export class MakeIdeeaComponent implements OnInit {
-  ideea: Ideea = new Ideea("", "", "");
+  usr: Useer = new Useer("", "", "","","");
   message: any;
   constructor(private servse: MyService) {}
 
@@ -45,7 +46,7 @@ export class MakeIdeeaComponent implements OnInit {
   }
 
   public AddUser() {
-    let resoonse = this.servse.addingUser(this.ideea);
+    let resoonse = this.servse.addingUser(this.usr);
     resoonse.subscribe((date) => (this.message = date));
   }
 }

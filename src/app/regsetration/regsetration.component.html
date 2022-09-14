@@ -2,37 +2,50 @@
   <div class="row">
     <div class="col-lg-2 cardShaddow" formGroupName="UsersInfo">
       <!-- <h1>Hla {{message}}</h1> <br> -->
+
       <form>
 
-        <div class="form-group" >
+        <div class="form-group">
           <label for="userName" class="col-form-label-lg "> User Name </label>
-          <input class="form-control phone textWiddth" type="text" [(ngModel)]="useer.userNem" name="userNaame" id="userName" required #name="ngModel">
+          <input class="form-control phone textWiddth" type="text" [(ngModel)]="usr.userName" name="user_name"
+                 id="userName" required #name="ngModel">
         </div>
         <div class="form-group">
           <label for="email" class="col-form-label-lg">Email </label>
-          <input class="form-control phone textWiddth"  type="text" [(ngModel)]="useer.email" name="email" id="email" >
+          <input class="form-control phone textWiddth" type="text" [(ngModel)]="usr.email" name="email" id="email">
         </div>
+                <div class="form-group">
+                  <label for="passWord"> PassWord </label>
+                  <input  type="password" [(ngModel)]="usr.passWord" name="passWord" id="passWord" class="form-control phone textWiddth" placeholder="Enter passWord" required>
+                </div>
+
+
+
         <div class="form-group">
-          <label for="passWord"> PassWord </label>
-          <input  type="password" [(ngModel)]="useer.passWord" name="passWord" id="passWord" class="form-control phone textWiddth" placeholder="Enter passWord" required>
-        </div>
-
-
-
-        <!-- <div class="form-group">
           <label for="Ideea"> Ideea : </label>
-          <textarea class="form-control" type="text" [(ngModel)]="useer.ideea" name="ideea" id="ideea"
+          <textarea class="form-control" type="text" [(ngModel)]="usr.ideea" name="ideea" id="ideea"
                     placeholder="Tell us The Ideea" required>
         </textarea>
-        </div> -->
+        </div>
+        <div class="form-group">
+          <label for="subject"> Ideea : </label>
+          <textarea class="form-control" type="text" [(ngModel)]="usr.subject" name="subject" id="subject"
+                    placeholder="Tell us The Ideea" required>
+        </textarea>
+        </div>
 
 
         <div class="form-group">
-          <input class="btn btn-success textWiddth" type="submit" name="submit_reg" value="Register" (click)="makeButtonAppear()">
+          <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="addUser();dataCheck()">
         </div>
       </form>
+
+
 
     </div>
 
   </div>
+</div>
+<div class="slide-left"*ngIf="showSeccessMesge">
+  Sent !
 </div>

@@ -11,6 +11,7 @@ import {MyService} from "./MyService";
 import { EmptyPageComponent } from './empty-page/empty-page.component';
 import { ShowAllUsersComponent } from './show-all-users/show-all-users.component';
 import { MakeIdeeaComponent } from './make-ideea/make-ideea.component';
+import {ServceTowService} from "./servce-tow.service";
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { MakeIdeeaComponent } from './make-ideea/make-ideea.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [MyService],
+  providers: [ServceTowService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

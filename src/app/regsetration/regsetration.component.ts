@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Useer} from "../Entitys/useer";
-import {MyService} from "../MyService";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {ServceTowService} from "../servce-tow.service";
 
 @Component({
   selector: 'app-regsetration',
@@ -10,12 +9,11 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class RegsetrationComponent implements OnInit {
 
-  useer: Useer = new Useer("", "", "", "");
+  usr: Useer = new Useer("", "", "", "", "");
 
   message: any
-  val=false;
 
-  constructor(private srvce: MyService) {
+  constructor(private srvce: ServceTowService) {
   }
 
   ngOnInit(): void {
@@ -23,19 +21,25 @@ export class RegsetrationComponent implements OnInit {
 
   //Post
 
-  public AddUser() {
-    let resoonse = this.srvce.addingUser(this.useer);
-    resoonse.subscribe((date) => this.message = date);
-    console.log(this.message);
+  public showSeccessMesge = false;
+
+  // public riset=false;
+
+  public addUser() {
+    let respoonse = this.srvce.addUseeer(this.usr);
+    respoonse.subscribe((date) => this.message = date);
+    // console.log(this.message+respoonse);
+    // console.log(this.respoonse);
+    // console.log(this.message);
   }
 
-  // valedation make button despear till all inputs are filled with text.
-  public makeButtonAppear(){
-    if (this.useer.userNem===" "){
-      console.log("aisunhusiahushyaddsauhyiuhioasuhashudsduhiiuhadsd")
+  dataCheck() {
+    if (this.showSeccessMesge == false)
+      this.showSeccessMesge = true
+    else {
+      this.showSeccessMesge = false
     }
+
+
   }
-
-
-//
 }

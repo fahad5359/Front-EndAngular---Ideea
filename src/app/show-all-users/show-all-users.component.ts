@@ -13,7 +13,7 @@ export class ShowAllUsersComponent implements OnInit {
   user: any
   id: number
   passShow = false
-  asd:string= "klb"
+  asd:string= "hla"
 
   constructor(private service: ServceTowService) {}
   ngOnInit() {

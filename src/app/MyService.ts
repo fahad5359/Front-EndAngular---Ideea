@@ -29,7 +29,7 @@ export class MyService {
   public getUserById(id) {
     return this.htpp.get('http://localhost:9191/getById/' + id)
   }
-  
+
   //Delete
   public deleteUser(id) {
     return this.htpp.delete("http://localhost:9191/deletById/" + id);
